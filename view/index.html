@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>ECare - Make a Difference Through Donations</title>
+  <meta name="description" content="Support ECare and make a positive impact on healthcare. Donate today to help us provide essential medical care and services to communities in need.">
+  <meta name="keywords" content="donation, healthcare, charity, ECare, medical support">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Donation Page Specific Styles */
+    .donation-hero {
+      background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      color: white;
+      padding: 60px 0;
+    }
+
+    .donation-hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .donation-hero p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+      opacity: 0.95;
+    }
+
+    .donation-amount-selector {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .donation-amount-btn {
+      padding: 20px;
+      border: 2px solid #e0e0e0;
+      border-radius: 12px;
+      background: white;
+      cursor: pointer;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #0d47a1;
+      transition: all 0.3s ease;
+    }
+
+    .donation-amount-btn:hover {
+      border-color: #0d47a1;
+      background: #f5f5f5;
+      transform: translateY(-2px);
+    }
+
+    .donation-amount-btn.active {
+      background: #0d47a1;
+      color: white;
+      border-color: #0d47a1;
+    }
+
+    .impact-section {
+      background: #f9f9f9;
+      padding: 80px 0;
+    }
+
+    .impact-card {
+      text-align: center;
+      padding: 30px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .impact-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .impact-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #0d47a1;
+      margin-bottom: 10px;
+    }
+
+    .impact-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .impact-description {
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    .testimonials-section {
+      padding: 80px 0;
+    }
+
+    .testimonial-card {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .testimonial-quote {
+      font-size: 1rem;
+      font-style: italic;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .testimonial-author {
+      font-weight: 600;
+      color: #0d47a1;
+      font-size: 0.95rem;
+    }
+
+    .why-donate-section {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+      color: white;
+    }
+
+    .why-donate-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .why-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
+
+    .why-item-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+
+    .why-item-content h4 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .why-item-content p {
+      margin: 0;
+      opacity: 0.95;
+    }
+
+    .cta-section {
+      padding: 80px 0;
+      background: white;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: 2.5rem;
+      color: #0d47a1;
+      margin-bottom: 20px;
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-donate {
+      background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+      color: white;
+      padding: 15px 50px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn-donate:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(13, 71, 161, 0.3);
+    }
+
+    .navbar-custom {
+      background: white;
+      padding: 15px 0;
+    }
+
+    .navbar-custom .navbar-brand {
+      color: #0d47a1;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    .navbar-custom .nav-link {
+      color: #333;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-custom .nav-link:hover {
+      color: #0d47a1;
+    }
+
+    .navbar-custom .btn-donate {
+      margin-left: 20px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">ECare</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#impact">Our Impact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section class="donation-hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+            <h1>Make a Difference Today</h1>
+            <p>Your donation helps us provide essential healthcare services to communities that need it most. Every contribution, big or small, creates meaningful change.</p>
+            <div class="donation-amount-selector">
+              <button class="donation-amount-btn" onclick="selectAmount(25)">$25</button>
+              <button class="donation-amount-btn" onclick="selectAmount(50)">$50</button>
+              <button class="donation-amount-btn active" onclick="selectAmount(100)">$100</button>
+              <button class="donation-amount-btn" onclick="selectAmount(250)">$250</button>
+              <button class="donation-amount-btn" onclick="selectAmount(500)">$500</button>
+              <input type="number" id="customAmount" placeholder="Custom" min="1" style="padding: 20px; border: 2px solid #e0e0e0; border-radius: 12px; font-size: 1.2rem; color: #0d47a1;">
+            </div>
+            <button class="btn-donate" onclick="processDonation()">Donate Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+            <img src="../assets/img/about.jpg" class="img-fluid rounded" alt="ECare Mission">
+          </div>
+          <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
+            <h3>Our Mission</h3>
+            <p class="fst-italic">
+              At ECare, we believe that quality healthcare is a fundamental right, not a privilege. We're committed to bridging the gap in medical access for underserved communities.
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle" style="color: #0d47a1;"></i> <span>Providing accessible healthcare services to remote and rural areas</span></li>
+              <li><i class="bi bi-check-circle" style="color: #0d47a1;"></i> <span>Supporting medical education and training programs</span></li>
+              <li><i class="bi bi-check-circle" style="color: #0d47a1;"></i> <span>Delivering emergency medical assistance to vulnerable populations</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="impact-section">
+      <div class="container">
+        <div class="section-title text-center mb-5" data-aos="fade-up">
+          <h2>Our Impact</h2>
+          <p>See what your donations have accomplished</p>
+        </div>
+        <div class="row gy-4">
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="impact-card">
+              <div class="impact-number">50K+</div>
+              <div class="impact-title">Lives Impacted</div>
+              <div class="impact-description">Over 50,000 individuals have received medical care through ECare</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="impact-card">
+              <div class="impact-number">25</div>
+              <div class="impact-title">Clinics Established</div>
+              <div class="impact-description">Healthcare centers operating in rural communities</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="impact-card">
+              <div class="impact-number">$2.5M</div>
+              <div class="impact-title">Funds Distributed</div>
+              <div class="impact-description">Total donations invested in medical programs</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="impact-card">
+              <div class="impact-number">15</div>
+              <div class="impact-title">Countries Served</div>
+              <div class="impact-description">ECare operates across multiple continents</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Donate Section -->
+    <section class="why-donate-section" data-aos="fade-up">
+      <div class="container">
+        <h2>Why Your Donation Matters</h2>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="why-item">
+              <div class="why-item-icon">
+                <i class="bi bi-heart-fill" style="font-size: 1.5rem;"></i>
+              </div>
+              <div class="why-item-content">
+                <h4>Direct Impact</h4>
+                <p>100% of your donation goes directly to medical programs and patient care. We maintain transparent reporting on fund allocation.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-item-icon">
+                <i class="bi bi-shield-check" style="font-size: 1.5rem;"></i>
+              </div>
+              <div class="why-item-content">
+                <h4>Trusted Organization</h4>
+                <p>ECare is a registered non-profit with verified credentials from leading charitable organizations.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-item-icon">
+                <i class="bi bi-globe" style="font-size: 1.5rem;"></i>
+              </div>
+              <div class="why-item-content">
+                <h4>Global Reach</h4>
+                <p>Your support helps us expand healthcare access to underserved communities worldwide.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-item-icon">
+                <i class="bi bi-receipt" style="font-size: 1.5rem;"></i>
+              </div>
+              <div class="why-item-content">
+                <h4>Tax-Deductible</h4>
+                <p>Your donation may be tax-deductible. We provide detailed receipts for all contributions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+      <div class="container">
+        <div class="section-title text-center mb-5" data-aos="fade-up">
+          <h2>Donor Stories</h2>
+          <p>Hear from people making a difference</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-card">
+              <i class="bi bi-quote" style="font-size: 2rem; color: #0d47a1; margin-bottom: 10px;"></i>
+              <div class="testimonial-quote">"Supporting ECare felt like a natural extension of my values. Knowing that my donation directly helps people receive life-saving medical care is incredibly fulfilling."</div>
+              <div class="testimonial-author">- Sarah Johnson, Australia</div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-card">
+              <i class="bi bi-quote" style="font-size: 2rem; color: #0d47a1; margin-bottom: 10px;"></i>
+              <div class="testimonial-quote">"I've seen the direct impact of ECare's work in my community. The healthcare services they provide have saved countless lives and improved our quality of life significantly."</div>
+              <div class="testimonial-author">- Dr. Amara Chen, Kenya</div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonial-card">
+              <i class="bi bi-quote" style="font-size: 2rem; color: #0d47a1; margin-bottom: 10px;"></i>
+              <div class="testimonial-quote">"ECare's transparency and dedication to their mission inspired me to become a monthly donor. It's a wonderful organization that truly cares about making a global difference."</div>
+              <div class="testimonial-author">- Michael Williams, Canada</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section">
+      <div class="container" data-aos="fade-up">
+        <h2>Ready to Make an Impact?</h2>
+        <p>Join thousands of donors who are helping us transform healthcare access worldwide. Your contribution, combined with others, creates powerful change.</p>
+        <button class="btn-donate" onclick="processDonation()">Donate Now</button>
+        <p style="margin-top: 30px; font-size: 0.95rem; color: #999;">Have questions? <a href="mailto:support@ecare.org" style="color: #0d47a1; text-decoration: none;">Contact us</a> at support@ecare.org</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer dark-background">
+    <div class="footer-content">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>ECare</h3>
+              <p>Making healthcare accessible to everyone, everywhere.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#impact">Our Impact</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h4>Contact Us</h4>
+            <p>Email: support@ecare.org</p>
+            <p>Phone: +1 (555) 123-4567</p>
+            <p>Follow us on social media</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="copyright">
+          &copy; <span>2024</span> <strong class="px-1">ECare</strong>. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+
+    let selectedAmount = 100;
+
+    function selectAmount(amount) {
+      selectedAmount = amount;
+      document.querySelectorAll('.donation-amount-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      event.target.classList.add('active');
+      document.getElementById('customAmount').value = '';
+    }
+
+    function processDonation() {
+      const customAmount = document.getElementById('customAmount').value;
+      const amount = customAmount ? customAmount : selectedAmount;
+      
+      if (!amount || amount <= 0) {
+        alert('Please select or enter a donation amount');
+        return;
+      }
+      
+      console.log('Processing donation of $' + amount);
+      alert('Thank you for your generosity! Donation of $' + amount + ' is being processed.');
+      // Here you would integrate with a payment gateway like Stripe
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Contact ECare - Get in Touch</title>
+  <meta name="description" content="Get in touch with ECare. Contact us for inquiries, partnerships, or to learn more about our healthcare initiatives.">
+  <meta name="keywords" content="contact, ECare, support, inquiries">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .navbar-custom {
+      background: white;
+      padding: 15px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    }
+
+    .navbar-custom .navbar-brand {
+      color: #0d47a1;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    .navbar-custom .nav-link {
+      color: #333;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-custom .nav-link:hover,
+    .navbar-custom .nav-link.active {
+      color: #0d47a1;
+    }
+
+    .page-title-section {
+      background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .page-title-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .page-title-section p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+
+    .contact-section {
+      padding: 80px 0;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .form-control {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 12px 15px;
+      font-size: 0.95rem;
+    }
+
+    .form-control:focus {
+      border-color: #0d47a1;
+      box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.1);
+    }
+
+    .contact-info {
+      padding: 40px;
+      background: #f9f9f9;
+      border-radius: 12px;
+    }
+
+    .info-item {
+      margin-bottom: 30px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .info-item i {
+      font-size: 1.5rem;
+      color: #0d47a1;
+      margin-right: 20px;
+      margin-top: 5px;
+      flex-shrink: 0;
+    }
+
+    .info-item h3 {
+      color: #333;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .info-item p {
+      color: #666;
+      margin: 0;
+    }
+
+    .btn-submit {
+      background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(13, 71, 161, 0.3);
+    }
+
+    .btn-donate-nav {
+      background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+      color: white;
+      padding: 10px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-donate-nav:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(13, 71, 161, 0.3);
+      color: white;
+    }
+
+    .map-container {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+      margin-bottom: 40px;
+    }
+
+    .map-container iframe {
+      border: none;
+      width: 100%;
+      height: 400px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">ECare</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#impact">Our Impact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn-donate-nav" href="index.html">Donate</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <section class="page-title-section">
+      <div class="container" data-aos="fade-up">
+        <h1>Contact Us</h1>
+        <p>We&apos;d love to hear from you. Get in touch with us today.</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="container">
+        <!-- Map -->
+        <div class="map-container" data-aos="fade-up">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354335144827!2d144.9537353!3d-37.8136276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf00ef62049ee02e0!2sECare%20Healthcare%20Foundation!5e0!3m2!1sen!2sus!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="row gy-5">
+          <!-- Contact Form -->
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+            <h2 style="color: #0d47a1; margin-bottom: 30px;">Send us a Message</h2>
+            <form class="contact-form" method="POST" action="#">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="name" class="form-label">Your Name *</label>
+                  <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="email" class="form-label">Your Email *</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="subject" class="form-label">Subject *</label>
+                <input type="text" class="form-control" id="subject" name="subject" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="message" class="form-label">Message *</label>
+                <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label for="inquiry-type" class="form-label">Type of Inquiry</label>
+                <select class="form-control" id="inquiry-type" name="inquiry_type">
+                  <option value="">Select...</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="donation">Donation Related</option>
+                  <option value="partnership">Partnership Opportunity</option>
+                  <option value="volunteer">Volunteer Opportunity</option>
+                  <option value="media">Media Inquiry</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="200">
+            <h2 style="color: #0d47a1; margin-bottom: 30px;">Contact Information</h2>
+            
+            <div class="contact-info">
+              <div class="info-item">
+                <i class="bi bi-geo-alt-fill"></i>
+                <div>
+                  <h3>Main Office</h3>
+                  <p>123 Healthcare Boulevard<br>New York, NY 10001<br>United States</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <i class="bi bi-telephone-fill"></i>
+                <div>
+                  <h3>Call Us</h3>
+                  <p>General: +1 (555) 123-4567<br>Donations: +1 (555) 234-5678<br>Partnerships: +1 (555) 345-6789</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <i class="bi bi-envelope-fill"></i>
+                <div>
+                  <h3>Email Us</h3>
+                  <p>General: support@ecare.org<br>Donations: donate@ecare.org<br>Partnerships: partnerships@ecare.org</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <i class="bi bi-clock-fill"></i>
+                <div>
+                  <h3>Office Hours</h3>
+                  <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed<br>(All times in EST)</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <i class="bi bi-globe"></i>
+                <div>
+                  <h3>Follow Us</h3>
+                  <p>
+                    <a href="#" style="color: #0d47a1; text-decoration: none; margin-right: 10px;"><i class="bi bi-facebook"></i></a>
+                    <a href="#" style="color: #0d47a1; text-decoration: none; margin-right: 10px;"><i class="bi bi-twitter"></i></a>
+                    <a href="#" style="color: #0d47a1; text-decoration: none; margin-right: 10px;"><i class="bi bi-instagram"></i></a>
+                    <a href="#" style="color: #0d47a1; text-decoration: none;"><i class="bi bi-linkedin"></i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section style="padding: 80px 0; background: #f9f9f9;">
+      <div class="container">
+        <div class="section-title text-center mb-5" data-aos="fade-up">
+          <h2>Frequently Asked Questions</h2>
+          <p>Find answers to common questions</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    How can I make a donation?
+                  </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    You can make a donation directly from our home page by selecting an amount and clicking &quot;Donate Now.&quot; We accept all major credit cards and PayPal. Your donation is secure and encrypted.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                    Is my donation tax-deductible?
+                  </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Yes! ECare is a registered 501(c)(3) nonprofit organization. Your donation is tax-deductible. We&apos;ll send you a receipt for your records.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                    How are donations used?
+                  </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    100% of donations go directly to our healthcare programs. We maintain transparent financial reporting and can provide detailed breakdowns of how funds are allocated.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                    Can I become a monthly donor?
+                  </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Absolutely! Monthly donations create a steady stream of support for our programs. Contact us at donate@ecare.org to set up recurring donations.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="500">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                    How can I volunteer?
+                  </button>
+                </h2>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    We welcome volunteers! Please fill out the contact form and select &quot;Volunteer Opportunity&quot; as your inquiry type, and we&apos;ll get back to you with available opportunities.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer dark-background">
+    <div class="footer-content">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>ECare</h3>
+              <p>Making healthcare accessible to everyone, everywhere.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h4>Contact Info</h4>
+            <p>Email: support@ecare.org</p>
+            <p>Phone: +1 (555) 123-4567</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="copyright">
+          &copy; <span>2024</span> <strong class="px-1">ECare</strong>. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+
+    // Handle form submission
+    document.querySelector('.contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your message! We will get back to you soon.');
+      this.reset();
+    });
+  </script>
+
+</body>
+
+</html>
